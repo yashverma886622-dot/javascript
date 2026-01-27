@@ -45,10 +45,55 @@
 //     alert("button clicked")
 // });
 
-const form=document.querySelector('form')
-form.addEventListener('submit',(event)=>{
-    event.preventDefault()
-    console.log("Form submitted!!!!")
-})
+// const form=document.querySelector('form')
+// form.addEventListener('submit',(event)=>{
+//     event.preventDefault()
+//     console.log("Form submitted!!!!")
+// })
+
+
+// console.log(a)
+// // console.log(b)
+
+// var a=10
+// let b=20
+
+// console.log(a)
+// console.log(b)
+
+// function print(){
+//     let c=63
+//     console.log(c)
+//     console.log("hello world")
+// }
+// print()
+
+
+
+// function greet(){
+//     var message="hello there"
+//     console.log(message);
+// }
+
+// greet();
+// console.log(message);
+
+
+// debugger
+// function first(){
+//     second()
+// }
+
+// function second(){
+//     third()
+// }
+
+// function third(){
+//     console.trace()
+   
+// }
+
+// first()
+
 
 
