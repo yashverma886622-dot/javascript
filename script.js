@@ -97,3 +97,6 @@
 
 
 
+// console.log("first line")
+// setTimeout(()=>{console.log("second line after 2 seconds")},1000)
+// console.log("third line")
