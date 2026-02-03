@@ -68,7 +68,7 @@
 // }
 // print()
 
-
+//                                               javascript scope
 
 // function greet(){
 //     var message="hello there"
@@ -96,7 +96,73 @@
 // first()
 
 
+//                                               Asynchronous JavaScript`
+
 
 // console.log("first line")
 // setTimeout(()=>{console.log("second line after 2 seconds")},1000)
 // console.log("third line")
+
+
+
+
+//                                             Timers in java script
+
+
+
+
+// setTimeout(()=>{
+//     alert("this is an alert of an 3 seconds")       // it will run only once after 3 seconds
+
+// },3*1000)
+
+// const timerId = setInterval(()=>{
+//     console.log("this is an alert of 3 seconds ")      // it will run after every 3 seconds
+// },1000)
+// console.log(timerId)
+// setTimeout(()=>{
+//     clearInterval(timerId)
+// },10000)
+
+
+
+
+// question1=you have to give one variable and print and after 10 seconds it stop printing
+
+// let count=0
+// const intervalId=setInterval(()=>{
+//     count++                                  // count=count+1
+//     console.log(count)
+// },1000)
+
+// setTimeout(()=>{
+//     clearInterval(intervalId)
+// },10000)
+
+
+// console.log("before timeout")
+// setTimeout(()=>{
+//     console.log("inside timeout")
+// },0)
+// console.log("after timeout")
+
+
+const inputName=document.querySelector("#name")
+const btn=document.querySelector("#btn")
+const list=document.querySelector(".list")
+
+btn.addEventListener("click",()=>{
+    if(name.value==="")return
+    const li=document.createElement("li")
+    const dlt=document.createElement("button")
+    dlt.innerText="delete"
+    li.innerText=name.value;
+    dlt.addEventListener("click",()=>{
+        list.removeChild(li)
+     
+    })
+    list.appendChild(li)
+    list.appendChild(dlt)
+    name.value=""
+   
+})
