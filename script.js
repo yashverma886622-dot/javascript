@@ -147,22 +147,87 @@
 // console.log("after timeout")
 
 
-const inputName=document.querySelector("#name")
-const btn=document.querySelector("#btn")
-const list=document.querySelector(".list")
 
-btn.addEventListener("click",()=>{
-    if(name.value==="")return
-    const li=document.createElement("li")
-    const dlt=document.createElement("button")
-    dlt.innerText="delete"
-    li.innerText=name.value;
-    dlt.addEventListener("click",()=>{
-        list.removeChild(li)
+
+
+
+
+// const inputName=document.querySelector("#name")
+// const btn=document.querySelector("#btn")
+// const list=document.querySelector(".list")
+
+// btn.addEventListener("click",()=>{
+//     if(name.value==="")return
+//     const li=document.createElement("li")
+//     const dlt=document.createElement("button")
+//     dlt.innerText="delete"
+//     li.innerText=name.value;
+//     dlt.addEventListener("click",()=>{
+//         list.removeChild(li)
      
-    })
-    list.appendChild(li)
-    list.appendChild(dlt)
-    name.value=""
+//     })
+//     list.appendChild(li)
+//     list.appendChild(dlt)
+//     name.value=""
    
-})
+// })
+
+
+
+
+
+
+// function greet(){
+//     console.log("hello students")
+// }
+
+// function print(sample,num){
+//     sample()
+//     console.log("total sududent are:",num)
+//     }
+// print(greet,50)
+
+
+// console.log("starting homework")
+// setTimeout(()=>{
+//     console.log("homework done");
+//     console.log("starting dinner");
+// setTimeout(()=>{
+//     console.log("dinner done");
+//     console.log("getting ready to go out");
+// setTimeout(()=>{
+//     console.log("go to the playground");
+// },1000);
+// },1500);
+
+// },2000);
+
+
+
+
+function finishhomework(callback){
+    console.log("starting homework");
+    setTimeout(()=>{
+        console.log("homework done");
+        callback();
+    },2000);
+}
+
+function eatdinner(callback){
+    console.log("starting dinner");
+    setTimeout(()=>{
+        console.log("dinner done");
+        callback();
+    },1500);
+}
+
+function gooutplayground(){
+    console.log("going to the playground");
+  
+}
+
+finishhomework(() => {
+    eatdinner(() => {
+        gooutplayground();
+    });
+});
