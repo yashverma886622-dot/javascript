@@ -205,29 +205,52 @@
 
 
 
-function finishhomework(callback){
-    console.log("starting homework");
-    setTimeout(()=>{
-        console.log("homework done");
-        callback();
-    },2000);
-}
+// function finishhomework(callback){
+//     console.log("starting homework");
+//     setTimeout(()=>{
+//         console.log("homework done");
+//         callback();
+//     },2000);
+// }
 
-function eatdinner(callback){
-    console.log("starting dinner");
-    setTimeout(()=>{
-        console.log("dinner done");
-        callback();
-    },1500);
-}
+// function eatdinner(callback){
+//     console.log("starting dinner");
+//     setTimeout(()=>{
+//         console.log("dinner done");
+//         callback();
+//     },1500);
+// }
 
-function gooutplayground(){
-    console.log("going to the playground");
+// function gooutplayground(){
+//     console.log("going to the playground");
   
-}
+// }
 
-finishhomework(() => {
-    eatdinner(() => {
-        gooutplayground();
-    });
-});
+// finishhomework(() => {
+//     eatdinner(() => {
+//         gooutplayground();
+//     });
+// });
+
+
+//promise fn
+const p=new Promise((res,rej) => {
+    let done=false
+    setTimeout(() => {
+        if(done){
+            res("Work is Done!")
+        }else{
+            rej("Work is not done:(")
+        }
+    },5000)
+})
+
+p.then((msg)=>{
+    console.log(msg)
+}).catch((err)=>{
+    console.log(err)
+}).finally(()=>{
+    console.log("Finally Block!")
+}) 
+
+console.log(p)
